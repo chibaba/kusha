@@ -1,8 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="row"> 
+@foreach($blogs as $blog)
+   <div class="col-md-6">
+   <div class="card">
+   <div class="card-header">
+   <a href="{{ route('blog_path', ['blog' =>$blog->id])}}">{{ $blog->title}}</a>
 
 
-<h1>this is the index.blade.php</h1>
+   </div>
+   <div class="card-body">
+
+{{$blog->content}} 
+   </div>
+   </div>
+
+</div>
+</div>
+
+
+
+@endforeach
 
 @endsection

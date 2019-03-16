@@ -17,5 +17,8 @@
 <label for="content">Content</label>
 <textarea name="content" rows="10" class="form-control"></textarea>
 </div>
+<div class="form-group">
+<button type="submit" class="btn btn-outline-primary">Add blog Post</button>
+</div>
 </form>
 @endsection
