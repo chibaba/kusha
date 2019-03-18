@@ -5,6 +5,7 @@
 <form action="{{ route('update_blog_path', ['blog' =>$blog->id]) }}" method="POst">
 
 @csrf
+@method('PUT')
 
 <div class="form group">aa
 <label for="title">Title
@@ -15,7 +16,7 @@
 </div>
 <div class="form-group">
 <label for="content">Content</label>
-<textarea name="content" rows="10" class="form-control">{{ $blog->content}}</textarea>
+<textarea name="content" rows="10" class="form-control" value="{{ $blog->content}}"></textarea>
 </div>
 <div class="form-group">
 <button type="submit" class="btn btn-outline-primary">Edit blog Post</button>

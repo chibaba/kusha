@@ -81,7 +81,14 @@ class BlogsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $blog = Blog::find($id);
+
+        $blog->title = $request->title;
+        $blog->content=$content->content;
+
+        $blog->update();
+
+        return redirect()->route('blog_path', ['blog' => $blog]);
     }
 
     /**

@@ -12,7 +12,7 @@
 <p class="lead">
  {{$blog->content}}
 </p>
-<a href={{ route('edit_blog_path')}}>Edit</a>
+<a href="{{ route('edit_blog_path', ['blog' =>$blog->id])}}">Edit</a>
 </div>
 
 
