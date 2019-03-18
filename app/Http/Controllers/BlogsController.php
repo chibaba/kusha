@@ -67,7 +67,9 @@ class BlogsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $blog = Blog::find($id);
+
+        return view('blogs.edit', ['blog' => $blog]);
     }
 
     /**

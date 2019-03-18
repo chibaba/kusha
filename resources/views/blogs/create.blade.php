@@ -6,7 +6,7 @@
 
 @csrf
 
-<div class="form group">
+<div class="form group">aa
 <label for="title">Title
 </label>
 <input type="text" name="title" class="form-control">
