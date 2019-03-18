@@ -84,7 +84,7 @@ class BlogsController extends Controller
         $blog = Blog::find($id);
 
         $blog->title = $request->title;
-        $blog->content=$content->content;
+        $blog->content=$request->content;
 
         $blog->update();
 
