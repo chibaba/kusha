@@ -99,6 +99,10 @@ class BlogsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $blog = Blog::find($id);
+
+        $blog->delete();
+
+        return redirect()->route('blogs_path');
     }
 }

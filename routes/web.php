@@ -19,4 +19,5 @@ Route::name('create_blog_path')->get('/blogs/create', 'BlogsController@create');
 Route::name('store_blog_path')->post('/blogs', 'BlogsController@store');
 Route::name('blog_path')->get('/blogs/{id}', 'BlogsController@show');
 Route::name('edit_blog_path')->get('/blogs/{id}/edit', 'BlogsController@edit');
-ROute::name('update_blog_path')->put('/blogs/{id}', 'BlogsController@update');
+Route::name('update_blog_path')->put('/blogs/{id}', 'BlogsController@update');
+Route::name('delete_blog_path')->delete('delete/{id}, BlogsController@destroy');
