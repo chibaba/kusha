@@ -13,6 +13,11 @@
    <div class="card-body">
 
 {{$blog->content}} 
+
+ <p class="lead">
+  posted
+     {{$blog->created_at->diffForHumans() }}
+ </p>
    </div>
    </div>
 

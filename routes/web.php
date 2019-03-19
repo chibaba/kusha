@@ -20,4 +20,4 @@ Route::name('store_blog_path')->post('/blogs', 'BlogsController@store');
 Route::name('blog_path')->get('/blogs/{id}', 'BlogsController@show');
 Route::name('edit_blog_path')->get('/blogs/{id}/edit', 'BlogsController@edit');
 Route::name('update_blog_path')->put('/blogs/{id}', 'BlogsController@update');
-Route::name('delete_blog_path')->delete('delete/{id}, BlogsController@destroy');
+Route::name('delete_blog_path')->delete('/blogs/{id}', 'BlogsController@destroy');
