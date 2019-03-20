@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\blog;
+use Storage;
 
 class BlogsController extends Controller
 {
@@ -36,7 +37,14 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
+        
         $blog = new Blog;
+ 
+        $path = Storage::putFile('public', $request->file('images'));
+
+        $url = Storage::url($path);
+        $blog->image = $url;
+
         $blog->title = $request->title;
         $blog->content = $request->content;
 
